@@ -1,4 +1,4 @@
-# make-promise-race-safe
+# make-promise-race-safe   [![Build Status](https://travis-ci.org/sebastienvercammen/make-promise-race-safe.svg?branch=master)](https://travis-ci.org/sebastienvercammen/make-promise-race-safe)
 
 A Node.js module to make the use of `Promise.race()` safe. Supplementary to [make-promises-safe](https://github.com/mcollina/make-promises-safe/) by [Matteo Collina](https://github.com/mcollina).
 
@@ -9,6 +9,8 @@ It implements the deprecation [DEP0018][unhandled] of Node.js in versions 6+ for
 ## The Problem
 
 I happily refer you to the [original documentation about "The Problem"](https://github.com/mcollina/make-promises-safe#the-problem) by [Matteo Collina](https://github.com/mcollina).
+
+This module patches `Promise.race` to emit `unhandledRejection` when a Promise without error handler rejects in `Promise.race`, making the rejection visible again.
 
 ## The Solution
 
