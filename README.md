@@ -1,6 +1,6 @@
 # make-promise-race-safe
 
-A Node.js module to make the use of `Promise.race()` safe. Supplementary to [Matteo Collina](https://github.com/mcollina)'s [make-promises-safe](https://github.com/mcollina/make-promises-safe/).
+A Node.js module to make the use of `Promise.race()` safe. Supplementary to [make-promises-safe](https://github.com/mcollina/make-promises-safe/) by [Matteo Collina](https://github.com/mcollina).
 
 It implements the deprecation [DEP0018][unhandled] of Node.js in versions 6+ for Promise rejections that are (unknowingly, unintentionally) concealed by `Promise.race()`. Using promises without this module might cause file descriptor and memory leaks.
 
@@ -8,7 +8,7 @@ It implements the deprecation [DEP0018][unhandled] of Node.js in versions 6+ for
 
 ## The Problem
 
-I happily refer you to @mcollina's [original documentation about "The Problem"](https://github.com/mcollina/make-promises-safe#the-problem).
+I happily refer you to the [original documentation about "The Problem"](https://github.com/mcollina/make-promises-safe#the-problem) by [Matteo Collina](https://github.com/mcollina).
 
 ## The Solution
 
@@ -58,6 +58,8 @@ node -r make-promise-race-safe server.js
 ```
 
 ## Benchmark
+
+The overhead is only for Promises used with `Promise.race`. All other Promises are unaffected.
 
 In our tests, the average overhead was ~9%:
 ```
