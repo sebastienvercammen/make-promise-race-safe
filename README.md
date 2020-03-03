@@ -1,6 +1,6 @@
 # make-promise-race-safe
 
-A Node.js module to make the use of promises safer. Supplementary to [Matteo Collina](https://github.com/mcollina)'s [make-promises-safe](https://github.com/mcollina/make-promises-safe/).
+A Node.js module to make the use of `Promise.race()` safe. Supplementary to [Matteo Collina](https://github.com/mcollina)'s [make-promises-safe](https://github.com/mcollina/make-promises-safe/).
 
 It implements the deprecation [DEP0018][unhandled] of Node.js in versions 6+ for Promise rejections that are (unknowingly, unintentionally) concealed by `Promise.race()`. Using promises without this module might cause file descriptor and memory leaks.
 
