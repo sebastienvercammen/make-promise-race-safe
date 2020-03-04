@@ -1,6 +1,6 @@
 {
   "name": "make-promise-race-safe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Emit unhandledRejection when a Promise rejection is concealed by Promise.race()",
   "main": "make-promise-race-safe.js",
   "scripts": {

@@ -26,6 +26,8 @@ npm install make-promise-race-safe --save-prod
 
 Adding error handlers to all promises may have an overhead cost. Benchmark the overhead in your environment before using it in production.
 
+**Note:** The overhead is only for Promises in `Promise.race`. All other Promises are unaffected.
+
 ```js
 'use strict';
 
@@ -60,8 +62,6 @@ node -r make-promise-race-safe server.js
 ```
 
 ## Benchmark
-
-The overhead is only for Promises used with `Promise.race`. All other Promises are unaffected.
 
 In our tests, the average overhead was ~9%:
 ```
